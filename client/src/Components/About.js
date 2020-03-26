@@ -1,15 +1,26 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
 import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 class About extends Component {
+    state = {
+        didViewCountUp: false
+    };
+
+    onVisibilityChange = isVisible => {
+        if (isVisible) {
+            this.setState({ didViewCountUp: true });
+        }
+    }
+
     render() {
         return (
             <div className=' mt-5 container' id='about'>
                 <Row>
                     <Col>
-                        <h1 className='text-center'>Our Company </h1>
+                        <h1 className='text-center company'>Our Company </h1>
                     </Col>
                 </Row>
                 <Row>
@@ -21,21 +32,26 @@ class About extends Component {
                 </p>
                     </Col>
                 </Row>
+                <hr />
 
-                <Row className='my-5'>
-                    <Col className='text-center'>
-                        <h1><CountUp end={15} />+</h1><br />
-                        <h3>Years of Experience</h3>
-                    </Col>
-                    <Col className='text-center'>
-                        <h1>1000+</h1><br />
-                        <h3>Successful Projects</h3>
-                    </Col>
-                    <Col className='text-center'>
-                        <h1>100%</h1><br />
-                        <h3>On Time Delivery</h3>
-                    </Col>
-                </Row>
+                <VisibilitySensor onChange={this.onVisibilityChange} delayedCall partialVisibility>
+                    <Row className='my-5'>
+
+                        <Col className='text-center'>
+                            <h1 className='number'><CountUp start={0} end={this.state.didViewCountUp ? 15 : 0} />+</h1><br />
+                            <h3>Years of Experience</h3>
+                        </Col>
+                        <Col className='text-center'>
+                            <h1 className='number'><CountUp start={0} end={this.state.didViewCountUp ? 1000 : 0} />+</h1><br />
+                            <h3>Successful Projects</h3>
+                        </Col>
+                        <Col className='text-center'>
+                            <h1 className='number'><CountUp start={0} end={this.state.didViewCountUp ? 100 : 0} />%</h1><br />
+                            <h3>On Time Delivery</h3>
+                        </Col>
+                    </Row>
+                </VisibilitySensor>
+                <hr />
             </div>
         )
     }

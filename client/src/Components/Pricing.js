@@ -4,6 +4,8 @@ class Pricing extends Component {
     render() {
         return (
             <div className='mx-5' id='pricing'>
+                <hr />
+
                 <div className="pricing-header px-3 py-2 pt-md-3 pb-md-4 mx-auto text-center ">
                     <h1 className="display-4">Pricing</h1>
                     <p className="lead px-4">
@@ -15,7 +17,7 @@ class Pricing extends Component {
                 </div>
                 <div className="container">
                     <div className="card-deck mb-3 text-center">
-                    <div className="card mb-4 shadow-sm position-relative">
+                        <div className="card mb-4 shadow-sm position-relative">
                             <div className="card-header">
                                 <h4 className="my-0 font-weight-normal">Professional Package</h4>
                             </div>
@@ -30,7 +32,7 @@ class Pricing extends Component {
                                     <li>Up to 5 email addresses</li>
                                     <li>24/7 Online Support</li>
                                 </ul>
-                                <button type="button" className="btn btn-lg btn-block text-light mx-auto " style={{ backgroundColor: 'rgb(0,120,130)'}}>$2499</button>
+                                <button type="button" className="btn btn-lg btn-block text-light mx-auto " style={{ backgroundColor: 'rgb(0,120,130)' }}>$2499</button>
                             </div>
                         </div>
 
@@ -51,7 +53,7 @@ class Pricing extends Component {
                                 <button type="button" className="btn btn-lg btn-block text-light" style={{ backgroundColor: 'rgb(0,120,130)' }}>$1499</button>
                             </div>
                         </div>
-               
+
                         <div className="card mb-4 shadow-sm">
                             <div className="card-header">
                                 <h4 className="my-0 font-weight-normal">E-commerce Package</h4>
@@ -75,7 +77,7 @@ class Pricing extends Component {
                     </div>
 
                 </div>
-
+                <hr />
             </div >
         )
     }

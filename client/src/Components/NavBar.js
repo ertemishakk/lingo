@@ -10,6 +10,7 @@ import {
     Button
 } from 'reactstrap';
 import HamburgerMenu from 'react-hamburger-menu'
+import ScrollspyNav from "react-scrollspy-nav";
 
 class NavBar extends Component {
     state = {
@@ -39,79 +40,93 @@ class NavBar extends Component {
     render() {
         return (
             <div>
+                <ScrollspyNav
+                    scrollTargetIds={['about', 'pricing', 'contact', 'portfolio']}
+                    scrollDuration="1000"
+                    offset={-70}
+                >
 
-                <Navbar expand="md" dark className={`fixed-top bg-light`}
-                    style={{ lineHeight: '30px', transition: 'all .5s ease' }} >
-                    <NavbarBrand href="/" className='font-weight-bold lingo-navbar-brand' style={{
-                        fontSize: this.state.changeColor ? '35px' : '40px', transition: 'all .5s ease'
-                    }}
-                    >Lingo</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} className='border-0 mt-2 float-right'>
-                        <HamburgerMenu
-                            isOpen={this.state.isOpen}
-                            navbar
-                            menuClicked={this.toggle}
-                            borderRadius={0}
-                            animationDuration={0.5}
-                        />
-                    </NavbarToggler>
-                    <Collapse isOpen={this.state.isOpen} navbar className='text-center'>
+                    <Navbar expand="md" dark className={`fixed-top bg-light `}
+                        style={{
+                            lineHeight: '30px',
+                        }} >
+                        <NavbarBrand href="/" className='font-weight-bold lingo-navbar-brand' style={{
+                            fontSize: this.state.changeColor ? '35px' : '40px',
 
-                        <Nav className="mx-auto navigation" navbar style={{ fontSize: this.state.changeColor ? '18px' : '20px', transition: 'all .5s ease' }}>
-                            <NavItem >
-                                <NavLink
-                                    className='text-dark'
-                                    href="/"
-                                >
-                                    HOME
+                        }}
+                        >Lingo</NavbarBrand>
+                        <NavbarToggler onClick={this.toggle} className='border-0 mt-2 float-right'>
+                            <HamburgerMenu
+                                isOpen={this.state.isOpen}
+                                navbar
+                                menuClicked={this.toggle}
+                                borderRadius={0}
+                                animationDuration={0.5}
+                            />
+                        </NavbarToggler>
+                        <Collapse isOpen={this.state.isOpen} navbar className='text-center'>
+
+                            <Nav className="mx-auto navigation " navbar
+                                style={{
+                                    fontSize: this.state.changeColor ? '18px' : '20px',
+                                }}
+                            >
+                                <NavItem >
+                                    <NavLink
+                                        className='text-dark '
+                                        href="/"
+
+                                    >
+                                        HOME
                                  </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
-                                    className='text-dark'
-                                    href="#about"
-                                >
-                                    ABOUT
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink
+                                        className='text-dark '
+                                        href="#about"
+
+                                    >
+                                        ABOUT
                                         </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
-                                    className='text-dark'
-                                    href="#services"
-                                >
-                                    SERVICES
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink
+                                        className='text-dark '
+                                        href="#portfolio"
+                                    >
+                                        PORTFOLIO
                                         </NavLink>
-                            </NavItem>
-
-                            <NavItem>
-                                <NavLink
-                                    className='text-dark'
-                                    href="#pricing"
-                                >
-                                    PRICING
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink
+                                        className='text-dark '
+                                        href="#pricing"
+                                    >
+                                        PRICING
                                         </NavLink>
-                            </NavItem>
+                                </NavItem>
 
-                            <NavItem>
-                                <NavLink
-                                    className='text-dark'
-                                    href="#contact"
-                                >
+                                <NavItem>
+                                    <NavLink
+                                        className='text-dark '
+                                        href="#contact"
+                                    >
 
-                                    CONTACT US
+                                        CONTACT US
                                         </NavLink>
-                            </NavItem>
+                                </NavItem>
 
-                        </Nav>
-
-                        <Button style={{ fontSize: '20px' }} className='text-light portfolio-button border-0 shadow-lg mr-2'>
-                            <i className="far fa-envelope pr-1 "></i>
-                            Get a Quote
+                            </Nav>
+                            <a href='#contact'>
+                                <Button style={{ fontSize: '20px' }} className='text-light portfolio-button border-0 shadow-lg mr-2'>
+                                    <i className="far fa-envelope pr-1 "></i>
+                                    Get a Quote
 
                         </Button>
-                    </Collapse>
-                </Navbar>
-
+                            </a>
+                        </Collapse>
+                    </Navbar>
+                </ScrollspyNav>
             </div>
         )
     }

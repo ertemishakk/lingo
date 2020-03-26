@@ -8,7 +8,7 @@ class Services extends Component {
     render() {
         return (
             <div>
-                <div id='services' className='container py-2'>
+                <div className='container py-2'>
                     <Fade>
                         <Row className='my-5'>
                             <Col className='text-center'>
@@ -37,7 +37,7 @@ class Services extends Component {
                         </Row>
                     </Fade>
 
-
+                    <hr />
                 </div>
             </div>
         )

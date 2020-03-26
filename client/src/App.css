@@ -6,10 +6,20 @@ body{
 .fas{
   color: rgb(46, 148, 148) !important;
 }
+.navigation{
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
 .lingo-navbar-brand{
   padding-left: 15px;
   color: rgb(52, 185, 185) !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 } 
 .portfolio-button{
   background-color: rgb(56, 163, 163) !important;
@@ -19,10 +29,27 @@ body{
   background-color: rgb(25, 107, 107) !important;
 
 }
+.company{
+  font-size: 38px !important;
+}
+.number{
+  color:rgb(0,120,130) !important;
+
+}
+
+
+
+.page-footer{
+  background-color:rgb(0,120,130) !important;
+}
+
+.portfolio-img{
+  height: 300px;
+}
 
 .masthead {
   background-image: url('./images/bg.png');
-  height: 85vh;
+  height: 70vh;
   overflow: hidden;
   margin-top: 70px !important;
   background-position: center;
@@ -30,7 +57,7 @@ body{
   background-size: cover;  
   margin:20px;
   border-radius: 30px;
-  min-height: 456px;
+  min-height: 700px;
   position: relative;
 
 }
@@ -43,43 +70,105 @@ body{
   padding-left: 40px;
   padding-right: 50%;
 }
-@media(min-width: 1680px){
+
+@media(min-width: 1100px){
   
   .motto{
-    font-size: 68px !important;  
+    font-size: 65px !important;  
+    top:50px;
 
     }
 }
+
+@media(min-width: 1197px){
+  
+  .motto{
+    font-size: 70px !important;  
+    top:50px;
+
+    }
+}
+
+@media(min-width: 1283px){
+  
+  .motto{
+    font-size: 75px !important;  
+    top:70px;
+
+    }
+    .masthead{
+      background-position: 60% 0;
+     }
+}
+@media(min-width: 1472px){
+  
+  .motto{
+    font-size: 80px !important;  
+    top:100px;
+
+    }
+   
+}
+
+
+
 
 @media(max-width: 1100px){
   .masthead{
    background-position: 55% 0;
   }
   .motto{
-    font-size:55px !important;
+    font-size:70px !important;
     top: 20px;
   
     }
 }
 @media(max-width: 919px){
   .motto{
-    font-size: 60px !important;
+    font-size: 65px !important;
     top: 20px;
   
     }
 }
 @media(max-width: 700px){
   .motto{
-    font-size: 55px !important;
+    font-size: 60px !important;
     top: 20px;
   
     }
+    .masthead{
+      background-position: 50% 0;
+     }
 }
 
 @media(max-width: 500px){
+  .masthead {
+    height: 50vh;
+    min-height: 500px;
+
+  
+  }
+  .motto{
+    font-size: 50px !important;
+    top: 20px;
+  
+    }
   .masthead{
     background-position: 46% 0;
    }
 }
-
+@media(max-width: 320px){
+  .masthead {
+    height: 50vh;
+    min-height: 400px;
+  }
+  .motto{
+    font-size: 40px !important;
+    top: 20px;
+  
+    }
+  .masthead{
+    background-position: 46% 0;
+   }
+}
  

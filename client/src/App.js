@@ -6,26 +6,23 @@ import Landing from './Components/Landing'
 import About from './Components/About'
 import Services from './Components/Services'
 import Pricing from './Components/Pricing'
+import Portfolio from './Components/Portfolio'
+import Contact from './Components/Contact'
 import Footer from './Components/Footer'
-import ScrollspyNav from "react-scrollspy-nav";
-
 
 function App() {
   return (
     <div className="App" >
-      <ScrollspyNav
-        scrollTargetIds={['about', 'services', 'pricing']}
-        scrollDuration="1000"
-        offset={-70}
-      >
 
-        <NavBar />
-        <Landing />
-        <About />
-        <Services />
-        <Pricing />
-        <Footer />
-      </ScrollspyNav>
+      <NavBar />
+      <Landing />
+      <About />
+      <Services />
+      <Portfolio />
+      <Pricing />
+      <Contact />
+      <Footer />
+
     </div>
   );
 }
